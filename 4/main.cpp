@@ -77,7 +77,7 @@ public:
    }
    else if(in_data > temp->data)
    {
-    this->search(temp->left , in_data);
+    this->search(temp->right , in_data);
    }
   }
   else
@@ -171,7 +171,10 @@ int main()
  obj.input();
  obj.display();
  int a = 0;
- a = obj.search(obj.root,10);
+ int s;
+ cout<<"Search Element in BST: ";
+ cin>>s;
+ a = obj.search(obj.root,s);
  if( a == 0)
  {
   cout<<"ELEMENT NOT FOUND"<<endl;
